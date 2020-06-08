@@ -3,8 +3,7 @@ package ups.edu.ec.controlador;
 import java.io.IOException;
 import java.util.GregorianCalendar;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +39,7 @@ public class CreacionPedido extends HttpServlet {
 		ComidaDAO comidaDAO = DAOFactory.getFactory().getComidaDAO();
 		TarjetaDAO tarjetaDAO = DAOFactory.getFactory().getTarjetaDAO();
 		
-		 EntityManager em =Persistence.createEntityManagerFactory("jpa").createEntityManager();
+		 //EntityManager em =Persistence.createEntityManagerFactory("jpa").createEntityManager();
 		
 	
 		String cliente =request.getParameter("cliente");

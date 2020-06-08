@@ -41,12 +41,14 @@ public class CreacionLista extends HttpServlet {
 		
 		List<Pedido> pedidos =null;
 		
+		//seleccion de nombre comida
 		if (opcion.equals("porNombreComida")) {
 		    pedidos = pedidoDAO.findByComida(criterio);
 			System.out.print("df");
 			request.setAttribute("pedidos", pedidos);
 			request.getRequestDispatcher("/JSPs/listar.jsp").forward(request,  response);
 			
+			//seleccion por numero de cedula
 		} else if (opcion.equals("porNumeroTarjeta")) {
 			pedidos = pedidoDAO.findByNumTar(criterio);
 			request.setAttribute("pedidos", pedidos);	
